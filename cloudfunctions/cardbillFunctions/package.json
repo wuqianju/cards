@@ -1,0 +1,20 @@
+{
+  "name": "cardbillFunctions",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "build": "tsc --project tsconfig.json",
+    "check": "tsc --project tsconfig.json --noEmit",
+    "watch": "tsc --project tsconfig.json --watch",
+    "predeploy": "npm run build"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "wx-server-sdk": "~2.4.0"
+  },
+  "devDependencies": {
+    "typescript": "^5.9.3"
+  }
+}

@@ -1,0 +1,43 @@
+<!--index.wxml-->
+<view class="container">
+  <view class="page-header">
+    <view>
+      <view class="page-title">我的卡片</view>
+      <view class="page-subtitle">管理信用卡额度与积分权益</view>
+    </view>
+  </view>
+
+  <button class="add-card" bindtap="onAddCard" aria-label="添加卡片">
+    <view class="add-card-icon" aria-hidden="true">
+      <view class="add-card-icon-horizontal"></view>
+      <view class="add-card-icon-vertical"></view>
+    </view>
+    <view class="add-card-content">
+      <view class="add-card-title">添加卡片</view>
+      <view class="add-card-description">录入银行、额度和积分上限</view>
+    </view>
+    <view class="add-card-arrow">›</view>
+  </button>
+
+  <view class="empty-state" wx:if="{{cardCount === 0}}">
+    <view class="empty-state-icon">▣</view>
+    <view class="empty-state-title">还没有卡片</view>
+    <view class="empty-state-description">点击上方按钮，开始管理你的第一张卡片</view>
+  </view>
+</view>
+      </view>
+      <image wx:if="{{!power.showItem && power.item.length}}" class="power_info_more" src="../../images/arrow.svg"></image>
+      <image wx:if="{{power.showItem && power.item.length}}" class="power_info_less" src="../../images/arrow.svg"></image>
+      <image wx:if="{{!power.item.length}}" class="power_item_icon" src="../../images/arrow.svg"></image>
+    </view>
+    <view wx:if="{{power.showItem}}">
+      <view wx:key="title" wx:for="{{power.item}}">
+        <view class="line"></view>
+        <view class="power_item" bindtap="jumpPage" data-type="{{ item.type }}" data-page="{{item.page}}">
+          <view class="power_item_title">{{item.title}}</view>
+          <image class="power_item_icon" src="../../images/arrow.svg"></image>
+        </view>
+      </view>
+    </view>
+  </view>
+</view>

@@ -1,0 +1,48 @@
+<view class="container">
+  <view class="intro">
+    <view class="intro-title">添加一张卡片</view>
+    <view class="intro-description">填写后可在卡管理中查看额度和积分信息</view>
+  </view>
+
+  <form bindsubmit="onSubmit">
+    <view class="form-card">
+      <view class="field">
+        <view class="field-label">所属银行<text class="required-mark">*</text></view>
+        <input class="field-input" value="{{form.bankName}}" placeholder="例如：中国银行" maxlength="30" data-field="bankName" bindinput="onFieldInput" />
+      </view>
+
+      <view class="field">
+        <view class="field-label">卡片额度<text class="required-mark">*</text></view>
+        <view class="input-with-suffix">
+          <input class="field-input" value="{{form.creditLimit}}" placeholder="请输入额度" type="digit" data-field="creditLimit" bindinput="onFieldInput" />
+          <text class="suffix">元</text>
+        </view>
+      </view>
+
+      <view class="field">
+        <view class="field-label">年积分上限<text class="required-mark">*</text></view>
+        <view class="input-with-suffix">
+          <input class="field-input" value="{{form.annualPointsLimit}}" placeholder="请输入年积分上限" type="number" data-field="annualPointsLimit" bindinput="onFieldInput" />
+          <text class="suffix">分</text>
+        </view>
+      </view>
+
+      <view class="field">
+        <view class="field-label">月积分上限<text class="required-mark">*</text></view>
+        <view class="input-with-suffix">
+          <input class="field-input" value="{{form.monthlyPointsLimit}}" placeholder="请输入月积分上限" type="number" data-field="monthlyPointsLimit" bindinput="onFieldInput" />
+          <text class="suffix">分</text>
+        </view>
+      </view>
+
+      <view class="field field-last">
+        <view class="field-label">备注信息</view>
+        <textarea class="remark-input" value="{{form.remark}}" placeholder="可填写卡片权益、账单日等信息" maxlength="200" auto-height data-field="remark" bindinput="onFieldInput" />
+      </view>
+    </view>
+
+    <button class="submit-button" form-type="submit">保存卡片</button>
+  </form>
+
+  <view class="form-note">当前为信息录入原型，保存到云端将在后续接入。</view>
+</view>

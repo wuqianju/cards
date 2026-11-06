@@ -1,0 +1,109 @@
+page {
+  background: #f6f7fb;
+}
+
+.container {
+  min-height: 100vh;
+  padding: 48rpx 32rpx 80rpx;
+  box-sizing: border-box;
+  font-family: "PingFang SC", sans-serif;
+}
+
+.intro {
+  margin-bottom: 30rpx;
+}
+
+.intro-title {
+  color: #1f2937;
+  font-size: 42rpx;
+  font-weight: 700;
+}
+
+.intro-description {
+  margin-top: 10rpx;
+  color: #8a94a6;
+  font-size: 26rpx;
+}
+
+.form-card {
+  overflow: hidden;
+  border-radius: 24rpx;
+  background: #ffffff;
+  box-shadow: 0 8rpx 28rpx rgba(40, 55, 80, 0.05);
+}
+
+.field {
+  margin: 0 28rpx;
+  padding: 30rpx 0 24rpx;
+  border-bottom: 1rpx solid #edf0f5;
+}
+
+.field-last {
+  border-bottom: 0;
+}
+
+.field-label {
+  margin-bottom: 18rpx;
+  color: #313b4d;
+  font-size: 28rpx;
+  font-weight: 500;
+}
+
+.required-mark {
+  margin-left: 6rpx;
+  color: #ef5350;
+}
+
+.field-input,
+.remark-input {
+  width: 100%;
+  padding: 0;
+  box-sizing: border-box;
+  color: #1f2937;
+  font-size: 30rpx;
+  line-height: 1.5;
+}
+
+.input-with-suffix {
+  display: flex;
+  align-items: center;
+}
+
+.input-with-suffix .field-input {
+  flex: 1;
+  min-width: 0;
+}
+
+.suffix {
+  flex: none;
+  margin-left: 20rpx;
+  color: #8a94a6;
+  font-size: 27rpx;
+}
+
+.remark-input {
+  min-height: 108rpx;
+}
+
+.submit-button {
+  margin-top: 42rpx;
+  border-radius: 44rpx;
+  color: #ffffff;
+  font-size: 32rpx;
+  font-weight: 600;
+  line-height: 88rpx;
+  background: #2f80ed;
+  box-shadow: 0 12rpx 24rpx rgba(47, 128, 237, 0.2);
+}
+
+.submit-button::after {
+  border: 0;
+}
+
+.form-note {
+  margin: 24rpx 24rpx 0;
+  color: #9ba5b5;
+  font-size: 23rpx;
+  line-height: 1.6;
+  text-align: center;
+}

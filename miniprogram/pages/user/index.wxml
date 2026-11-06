@@ -1,0 +1,35 @@
+<!--index.wxml-->
+<view class="container">
+  <view class="header">
+    <button class="avatar-button" open-type="chooseAvatar" bind:chooseavatar="onChooseAvatar" aria-label="选择头像">
+      <image wx:if="{{userInfo.avatarUrl}}" class="avatar" src="{{userInfo.avatarUrl}}" mode="aspectFill" />
+      <view wx:else class="avatar-placeholder">我</view>
+    </button>
+    <view class="profile-content">
+      <view class="greeting">你好!</view>
+      <input
+        class="nickname-input"
+        type="nickname"
+        value="{{userInfo.nickName}}"
+        placeholder="点击输入昵称"
+        bindblur="onNicknameChange"
+      />
+    </view>
+  </view>
+  <view class="account-summary">
+    积分：{{userInfo.point}}
+    里程：{{userInfo.mileage}}
+    优惠券：{{userInfo.coupon}}
+  </view>
+  <view class="operate" wx:key="title" wx:for="{{operates}}" wx:for-item="operate">
+    <view class="operate_info" data-index="{{index}}" data-type="{{ operate.type }}" bindtap="onClickPowerInfo">
+      <view class="operate_text">
+        <view class="operate_text_title">
+          {{operate.title}}
+          <view class="operate_text_tag" wx:if="{{operate.tag}}">{{operate.tag}}</view>
+        </view>
+        <view class="operate_text_tip">{{operate.tip}}</view>
+      </view>
+    </view>
+  </view>
+</view>

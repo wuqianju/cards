@@ -1,0 +1,132 @@
+/**index.wxss**/
+
+page {
+  background: #f6f7fb;
+}
+
+.container {
+  min-height: 100vh;
+  padding: 56rpx 32rpx 80rpx;
+  box-sizing: border-box;
+  font-family: "PingFang SC", sans-serif;
+}
+
+.page-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 32rpx;
+}
+
+.page-title {
+  color: #1f2937;
+  font-size: 44rpx;
+  font-weight: 700;
+  line-height: 1.35;
+}
+
+.page-subtitle {
+  margin-top: 8rpx;
+  color: #8a94a6;
+  font-size: 26rpx;
+}
+
+.add-card {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  min-height: 156rpx;
+  padding: 28rpx 30rpx;
+  box-sizing: border-box;
+  border: 0;
+  border-radius: 24rpx;
+  text-align: left;
+  background: linear-gradient(135deg, #2f80ed, #5b9cf2);
+  box-shadow: 0 16rpx 34rpx rgba(47, 128, 237, 0.22);
+}
+
+.add-card::after {
+  border: 0;
+}
+
+.add-card-icon {
+  position: relative;
+  flex: none;
+  width: 72rpx;
+  height: 72rpx;
+  border-radius: 20rpx;
+  background: rgba(255, 255, 255, 0.2);
+}
+
+.add-card-icon-horizontal,
+.add-card-icon-vertical {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 32rpx;
+  height: 4rpx;
+  border-radius: 4rpx;
+  background: #ffffff;
+  transform: translate(-50%, -50%);
+}
+
+.add-card-icon-vertical {
+  transform: translate(-50%, -50%) rotate(90deg);
+}
+
+.add-card-content {
+  flex: 1;
+  min-width: 0;
+  margin-left: 22rpx;
+}
+
+.add-card-title,
+.add-card-description,
+.add-card-arrow {
+  color: #ffffff;
+}
+
+.add-card-title {
+  font-size: 34rpx;
+  font-weight: 600;
+}
+
+.add-card-description {
+  margin-top: 8rpx;
+  font-size: 24rpx;
+  opacity: 0.82;
+}
+
+.add-card-arrow {
+  margin-left: 16rpx;
+  font-size: 50rpx;
+  font-weight: 300;
+  line-height: 1;
+}
+
+.empty-state {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 136rpx 20rpx 0;
+  color: #8a94a6;
+}
+
+.empty-state-icon {
+  color: #c6cfdd;
+  font-size: 80rpx;
+  line-height: 1;
+}
+
+.empty-state-title {
+  margin-top: 28rpx;
+  color: #5d6778;
+  font-size: 30rpx;
+  font-weight: 500;
+}
+
+.empty-state-description {
+  margin-top: 12rpx;
+  color: #9ba5b5;
+  font-size: 25rpx;
+}
